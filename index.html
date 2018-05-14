@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Daily B.read</title>
+
+	<!-- Bootstrap core CSS -->
+	<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+	<!-- Custom fonts for this template -->
+	<link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+
+	<!-- Custom styles for this template -->
+	<link href="css/new-age.css" rel="stylesheet">
+
+	<!-- Javascript to switch b/w current and completed plans-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>
+	$(document).ready(function(){
+		$("#current-label").click(function(){
+			$("#current-plans").show();
+			$('#current-label hr').css('visibility', 'visible');
+			$("#completed-plans").hide();
+			$('#completed-label hr').css('visibility', 'hidden');
+		});
+		$("#completed-label").click(function(){
+			$("#completed-plans").show();
+			$('#completed-label hr').css('visibility', 'visible');
+			$("#current-plans").hide();
+			$('#current-label hr').css('visibility', 'hidden');
+		});
+	});
+	</script>
+
+</head>
+
+<body id="page-top">
+
+	<!-- Navigation -->
+	<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+		<div class="container">
+
+			<a class="navbar-brand js-scroll-trigger" href="index.html"><img src="img/app-icon.jpg">Daily B.read</a>
+			<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+				Menu
+				<i class="fa fa-bars"></i>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarResponsive">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item">
+						<a class="nav-link js-scroll-trigger" href="index.html">All Plans</a>
+					</li>
+					<li class="nav-item">
+						<!--Link to list of all friends-->
+						<a class="nav-link js-scroll-trigger" href="">Friends</a>
+					</li>
+				</li>
+				<li class="nav-item">
+					<!--Link to profile page-->
+					<a class="nav-link js-scroll-trigger" href="">Profile</a>
+				</li>
+			</li>
+		</ul>
+	</div>
+</div>
+</nav>
+
+<section class= "header">
+	<div class="container last-time">
+		<p class="label">Last Time:</p>
+		<!--connect with backend-->
+		<h1>Put Plan Name Here</h1>
+		<!--connect with backend-->
+		<h3>Put Book-name Chapter# Here</h3>
+		<div id="resume">
+			<!-- Link to reading page -->
+			<button href="" type="button" class="btn-lg">Resume Reading</button>
+		</div>
+	</div>
+</section>
+
+<!--All Plans-->
+<section class="plan-labels">
+	<div class="container">
+		<div class="row">
+			<div id="current-label" class="col-sm-6">
+				<p class="label link">Current Plans</p>
+				<hr>
+			</div>
+			<div id="completed-label" class="col-sm-6">
+				<p class="label link">Completed Plans</p>
+				<hr style="visibility: hidden;">
+			</div>
+		</div>
+	</div>
+</section>
+
+<section id="current-plans" class="plans-list">
+	<div class="container">
+		<div class="row">
+
+	<!-- Link to single plan page (page with stats) -->
+			<a class="plan-link" href="">
+				<div class= "col-sm-12 plan">
+					<p>Bible in 365 Days</p>
+				</div>
+				<div class="progress">
+					<div class="progress-bar progress-20"></div>
+				</div>
+			</a>
+
+			<a class="plan-link" href="">
+				<div class="col-sm-12 plan">
+					<p>The Gospels</p>
+				</div>
+				<div class="progress">
+					<div class="progress-bar progress-20"></div>
+				</div>
+			</a>
+
+			<a class="plan-link" href="">
+				<div class= "col-sm-12 plan">
+					<p>One Psalm a Day</p>
+				</div>
+				<div class="progress">
+					<div class="progress-bar progress-20"></div>
+				</div>
+			</a>
+
+			<a class="plan-link" href="">
+				<div class= "col-sm-12 plan">
+					<p>Wisdom Books</p>
+				</div>
+				<div class="progress">
+					<div class="progress-bar progress-20"></div>
+				</div>
+			</a>
+
+<!-- link to create new plan page -->
+	<a class="create-plan-link" href="">
+			<div class= "col-sm-12 new-plan" >
+				<i class="fas fa-plus"></i>
+				<p>Create New Plan</p>
+			</div>
+	</a>
+
+		</div>
+	</div>
+</section>
+
+<section id="completed-plans" class="plans-list">
+	<div class="container">
+		<div class="row">
+
+			<a class="plan-link" href="">
+				<div class= "col-sm-12 plan">
+					<p>Epistles of Paul</p>
+				</div>
+				<div class="progress">
+					<div class="progress-bar progress-complete"></div>
+				</div>
+			</a>
+
+			<a class="plan-link" href="">
+				<div class="col-sm-12 plan">
+					<p>Daily Proverbs</p>
+				</div>
+				<div class="progress">
+					<div class="progress-bar progress-complete"></div>
+				</div>
+			</a>
+
+		</div>
+	</div>
+</section>
+
+<!-- Bootstrap core JavaScript -->
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<!-- Plugin JavaScript -->
+<script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+<!-- Custom scripts for this template -->
+<script src="js/new-age.min.js"></script>
+
+</body>
+
+</html>
